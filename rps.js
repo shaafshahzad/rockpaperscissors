@@ -6,13 +6,6 @@ let outcome = '';
 let totalScore = '';
 let i = 0;
 
-function startGame(){
-    while (i <= 5) {
-        playRound();
-        i += 1;
-    }
-}
-
 function playRound(playerSelection){
     const computerSelection = computerPlay();
 
@@ -32,7 +25,6 @@ function playRound(playerSelection){
         computerPoints += 1;
         outcome = ('Computer wins. ' + computerSelection + ' beats ' + playerSelection);
         totalScore = ("<br><br>Player: " + playerPoints + "<br>Computer: " + computerPoints);
-
     }
 
     document.getElementById('outcome').innerHTML = outcome;
@@ -45,13 +37,15 @@ function playRound(playerSelection){
 function checkWinner(){
     if (playerPoints === 3) {
         outcome = 'Player wins.';
-        console.log('hello');
         disableButtons();
     } else if (computerPoints === 3) {
         outcome = 'Computer wins.';
-        console.log('hello');
         disableButtons();
     }
+
+    document.getElementById('outcome').innerHTML = outcome;
+    return;
+    
 }
 
 function computerPlay(){
