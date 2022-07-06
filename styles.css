@@ -14,7 +14,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 256px;
+    padding-top: 255px;
+    padding-bottom: 250px;
 }
 
 .sideheader {
@@ -29,10 +30,19 @@ body {
     justify-content: space-between;
 }
 
+.info {
+    display: flex;
+    font-size: 14px;
+    width: 250px;
+    margin-bottom: 290px;
+}
+
 .buttons {
     padding: 16px;
+    width: 500px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .results {

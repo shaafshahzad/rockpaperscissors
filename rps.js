@@ -14,16 +14,16 @@ function playRound(playerSelection){
         playerSelection == 'scissors' && computerSelection == 'rock'){
 
         playerPoints += 1;
-        outcome = ('Player wins. ' + playerSelection + ' beats ' + computerSelection);
+        outcome = ('Player wins, ' + playerSelection + ' beats ' + computerSelection);
         totalScore = ("<br><br>Player: " + playerPoints + "<br>Computer: " + computerPoints);
  
     } else if (playerSelection == computerSelection){
-        outcome = ('Tie. Both player and computer picked the same object.')
+        outcome = ('Tie, both the player and computer picked the same object.')
         totalScore = ("<br><br>Player: " + playerPoints + "<br>Computer: " + computerPoints);
 
     } else {
         computerPoints += 1;
-        outcome = ('Computer wins. ' + computerSelection + ' beats ' + playerSelection);
+        outcome = ('Computer wins, ' + computerSelection + ' beats ' + playerSelection);
         totalScore = ("<br><br>Player: " + playerPoints + "<br>Computer: " + computerPoints);
     }
 
@@ -36,10 +36,10 @@ function playRound(playerSelection){
 
 function checkWinner(){
     if (playerPoints === 3) {
-        outcome = 'Player wins.';
+        outcome = 'Player wins. Refresh to play again.';
         disableButtons();
     } else if (computerPoints === 3) {
-        outcome = 'Computer wins.';
+        outcome = 'Computer wins. Refresh to play again.';
         disableButtons();
     }
 
