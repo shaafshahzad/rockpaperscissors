@@ -6,15 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scisscors</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div style="margin-bottom: 20px">
-        <input type="button" value="rock"></input>
-        <input type="button" value="paper"></input>
-        <input type="button" value="scissors"></input>
+    <div class="sideheader">
+        <i>Rock...<br>Paper...<br>Scissors!</i>
+
+        <div class="footer">
+            Made by <a href="https://github.com/shaafshahzad">Shaaf Shahzad</a>
+        </div>
+
     </div>
-    <div id="outcome"></div>
-    <div id="totalScore"></div>
+
+    <div class="body">
+        <div class="buttons">
+            <input type="button" value="rock"></input>
+            <input type="button" value="paper"></input>
+            <input type="button" value="scissors"></input>
+        </div>
+
+        <div class="results">
+            <div id="outcome"></div>
+            <div id="totalScore"></div>            
+        </div>
+    </div>
+
+
+
+
     <script src="rps.js"></script>
 </body>
 <html>
