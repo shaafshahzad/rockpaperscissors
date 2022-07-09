@@ -45,6 +45,25 @@ body {
     justify-content: space-between;
 }
 
+.rock:active {
+    background-color: #ffffff;
+    box-shadow: 0 5px rgb(172, 172, 172);
+    transform: translateY(4px);
+}
+
+.paper:active {
+    background-color: #ffffff;
+    box-shadow: 0 5px rgb(172, 172, 172);
+    transform: translateY(4px);
+}
+
+.scissors:active {
+    background-color: white;
+    box-shadow: 0 5px rgb(172, 172, 172);
+    transform: translateY(4px);
+}
+
+
 .results {
     width: 500px;
     text-align: center;
