@@ -1,7 +1,7 @@
 const choice = ['rock', 'paper', 'scissors'];
-let playerPoints = 0
-let computerPoints = 0
-const buttons = document.querySelectorAll('input')
+let playerPoints = 0;
+let computerPoints = 0;
+const buttons = document.querySelectorAll('input');
 let outcome = '';
 let totalScore = '';
 let i = 0;
@@ -14,17 +14,21 @@ function playRound(playerSelection){
         playerSelection == 'scissors' && computerSelection == 'rock'){
 
         playerPoints += 1;
-        outcome = ('Player wins, ' + playerSelection + ' beats ' + computerSelection);
+        outcome = ('Player wins, ' + playerSelection + ' beats ' + computerSelection + '.');
         totalScore = ("<br><br>Player: " + playerPoints + "<br>Computer: " + computerPoints);
  
     } else if (playerSelection == computerSelection){
-        outcome = ('Tie, both the player and computer picked the same object.')
+        outcome = ('Tie, both the player and computer picked ' + playerSelection + '.')
         totalScore = ("<br><br>Player: " + playerPoints + "<br>Computer: " + computerPoints);
 
     } else {
         computerPoints += 1;
-        outcome = ('Computer wins, ' + computerSelection + ' beats ' + playerSelection);
+        outcome = ('Computer wins, ' + computerSelection + ' beats ' + playerSelection + '.');
         totalScore = ("<br><br>Player: " + playerPoints + "<br>Computer: " + computerPoints);
+    }
+
+    if (playerSelection == 'refresh') {
+        return;
     }
 
     document.getElementById('outcome').innerHTML = outcome;
@@ -36,10 +40,10 @@ function playRound(playerSelection){
 
 function checkWinner(){
     if (playerPoints === 3) {
-        outcome = 'Player wins. Refresh to play again.';
+        outcome = 'Player wins. Click the refresh button to play again.';
         disableButtons();
     } else if (computerPoints === 3) {
-        outcome = 'Computer wins. Refresh to play again.';
+        outcome = 'Computer wins. Click the refresh button to play again.';
         disableButtons();
     }
 
@@ -52,7 +56,7 @@ function computerPlay(){
     return choice[Math.floor(Math.random() * choice.length)];
 }
 
-function disableButtons() {
+function disableButtons(){
     buttons.forEach(elem => {
         elem.disabled = true
     })

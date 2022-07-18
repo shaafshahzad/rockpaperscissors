@@ -34,7 +34,7 @@ body {
     display: flex;
     font-size: 14px;
     width: 250px;
-    margin-bottom: 290px;
+    margin-bottom: 300px;
 }
 
 .buttons {
@@ -45,30 +45,79 @@ body {
     justify-content: space-between;
 }
 
+.rock {
+    transition: transform 250ms;
+}
+
+.rock:hover {
+    background-color: #ffffff;
+    transform: translateY(-4px);
+}
+
 .rock:active {
     background-color: #ffffff;
-    box-shadow: 0 5px rgb(172, 172, 172);
     transform: translateY(4px);
+}
+
+.paper {
+    transition: transform 250ms;
+}
+
+.paper:hover {
+    background-color: #ffffff;
+    transform: translateY(-4px);
 }
 
 .paper:active {
     background-color: #ffffff;
-    box-shadow: 0 5px rgb(172, 172, 172);
     transform: translateY(4px);
+}
+
+.scissors {
+    transition: transform 250ms;
+}
+
+.scissors:hover {
+    background-color: #ffffff;
+    transform: translateY(-4px);
 }
 
 .scissors:active {
     background-color: white;
-    box-shadow: 0 5px rgb(172, 172, 172);
     transform: translateY(4px);
 }
 
+.refresh {
+    transition: transform 250ms;
+}
+
+.refresh:hover {
+    background-color: #ffffff;
+    transform: translateY(4px);
+}
+
+.refresh:active {
+    background-color: white;
+    box-shadow: 0 5px rgb(172, 172, 172);
+    transform: translateY(-4px);
+}
 
 .results {
     width: 500px;
     text-align: center;
     display: flex;
     flex-direction: column;
+    animation: fadeIn 3.5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.refresh {
+    display: flex;
+    padding: 16px;
 }
 
 .footer {
